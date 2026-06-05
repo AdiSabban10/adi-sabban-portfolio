@@ -1,3 +1,5 @@
+import { projects } from '../data/projects'
+
 export function Header() {
   return (
     <header className="header">
@@ -16,11 +18,19 @@ export function Header() {
               type="button"
               className="header__dropdown-trigger"
               aria-haspopup="true"
-              disabled
             >
               Jump to
               <span aria-hidden="true">▾</span>
             </button>
+            <ul className="header__dropdown-menu" role="menu">
+              {projects.map((project) => (
+                <li key={project.id} role="none">
+                  <a href={`#${project.slug}`} role="menuitem">
+                    {project.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
         </nav>
       </div>

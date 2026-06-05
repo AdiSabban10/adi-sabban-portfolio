@@ -44,9 +44,15 @@
   gap: 1.25rem;
 }
 
-.section--placeholder {
-  padding-block: 3rem;
+.case-studies-section {
   border-top: 1px solid var(--color-border);
+  scroll-margin-top: var(--header-height);
+}
+
+.case-studies-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
 }
 
 .hero {
