@@ -1,7 +1,12 @@
+import { useEffect } from 'react'
 import { Header } from './components/Header'
 import { Hero } from './components/Hero'
+import { projects } from './data/projects'
 
 function App() {
+  useEffect(() => {
+    console.log('Portfolio projects loaded:', projects)
+  }, [])
   return (
     <>
       <Header />
