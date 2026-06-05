@@ -1,4 +1,5 @@
 import { CaseStudy } from './components/CaseStudy'
+import { Footer } from './components/Footer'
 import { Header } from './components/Header'
 import { Hero } from './components/Hero'
 import { ProjectCard } from './components/ProjectCard'
@@ -46,6 +47,7 @@ function App() {
           </div>
         </section>
       </main>
+      <Footer />
     </>
   )
 }
