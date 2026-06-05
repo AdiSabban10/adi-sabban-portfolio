@@ -22,7 +22,7 @@ todos:
     status: completed
   - id: stage-7-polish
     content: "Stage 7: Footer, responsive polish, favicon, final commit, wait for approval"
-    status: in_progress
+    status: completed
 isProject: false
 ---
 
