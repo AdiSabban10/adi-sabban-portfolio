@@ -33,6 +33,17 @@
   font-size: 1.0625rem;
 }
 
+.projects-section {
+  border-top: 1px solid var(--color-border);
+  scroll-margin-top: var(--header-height);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
 .section--placeholder {
   padding-block: 3rem;
   border-top: 1px solid var(--color-border);
