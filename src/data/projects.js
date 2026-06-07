@@ -58,11 +58,10 @@ export const projects = [
       "Junior-to-mid traits: Component decomposition, Redux action/reducer patterns, REST consumption, responsive UI (mobile footer nav, scroll-driven header behavior), and third-party API integration (Google Maps, OAuth)",
       "Growth-area signals: Some auth logic is partially stubbed (bcrypt compare commented out in login), mixed local/remote service patterns, and hardcoded API keys — typical of a bootcamp sprint, but shows real full-stack scope"
     ],
-    "constraintNote": "Honesty notes for your portfolio: React: Yes — confirmed in package.json and .jsx source files. TypeScript: No — JavaScript/JSX only (@types/react is dev-only). Backend: Yes — Express + MongoDB is fully present. Group project: Call out \"3-person team\" on resume and in case studies; specify your personal contributions if you remember them (e.g., filters, maps, checkout, auth).",
     "collaboration": "Team project — 3-person group",
     "links": {
       "github": null,
-      "live": null
+      "live": "https://abnb-b2o9.onrender.com/"
     }
   },
   {
@@ -120,10 +119,9 @@ export const projects = [
       "Product-minded UX — Unread styling, relative timestamps in preview, folder selection state, empty-folder messaging",
       "Junior-to-mid trajectory — Solid feature delivery with some commented/WIP integration hooks (e.g. note→mail compose via search params)"
     ],
-    "constraintNote": "Scope note for interviews: Describe this as the Gmail half of a two-person sprint. The notes app (todos, images, YouTube API, trash/pin) is your partner's work unless you also contributed to shared files (RootCmp, AppHeader, async-storage.service.js).",
     "collaboration": "Pair project — Gmail module (Adi Sabban)",
     "links": {
-      "github": null,
+      "github": "https://github.com/DarrOr24/Sprint3-GoogleKeep-Gmail",
       "live": null
     }
   },
@@ -173,11 +171,10 @@ export const projects = [
       "Clear separation of concerns without frameworks; practical Canvas API usage (draw, resize, export); stateful editing (multi-line model, selection index); mobile-aware UX (media queries, hamburger nav, touch listeners).",
       "Traits align with a strong junior front-end developer: structured code and feature completeness, with room to grow on listener lifecycle, async image loading (onload), and reducing global/DOM coupling."
     ],
-    "constraintNote": null,
     "collaboration": "Solo project",
     "links": {
-      "github": null,
-      "live": null
+      "github": "https://github.com/AdiSabban10/Meme-Generator",
+      "live": "https://adisabban10.github.io/Meme-Generator/"
     }
   },
   {
@@ -225,11 +222,10 @@ export const projects = [
       "Junior strengths: Solid grasp of game logic (mine placement, neighbor counts, flood-fill, victory conditions); separation of utilities vs. game logic; use of ES6 (spread, arrow functions, map); feature scope beyond a minimal Minesweeper (hints, undo, lives, dark mode).",
       "Growth areas visible in code: Global state and inline handlers instead of modular/event-delegation patterns; instructor code-review notes (@ CR) on naming, duplication, and structure; sound assets referenced but not present in the repo; some logic duplicated across hint/mega-hint flows."
     ],
-    "constraintNote": "This is an honest assessment based on the five project files (index.html, css/app.css, js/game.js, js/utils.js, .vscode/settings.json). No React, TypeScript, build tools, or backend are used.",
     "collaboration": "Solo project",
     "links": {
-      "github": null,
-      "live": null
+      "github": "https://github.com/AdiSabban10/Minesweeper-game",
+      "live": "https://adisabban10.github.io/Minesweeper-game/",
     }
   }
 ]

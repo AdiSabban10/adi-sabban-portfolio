@@ -117,12 +117,6 @@ function PositioningContent({ project }) {
           </ul>
         </dd>
       </div>
-      {project.constraintNote && (
-        <div className="detail-list__row">
-          <dt>Note</dt>
-          <dd className="detail-list__note">{project.constraintNote}</dd>
-        </div>
-      )}
     </dl>
   )
 }
