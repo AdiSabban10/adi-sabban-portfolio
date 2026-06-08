@@ -117,6 +117,30 @@ function PositioningContent({ project }) {
           </ul>
         </dd>
       </div>
+      {project.resumeBullets && (
+        <div className="detail-list__row">
+          <dt>Resume Bullets</dt>
+          <dd>
+            <ul className="bullet-list">
+              {project.resumeBullets.map((bullet) => (
+                <li key={bullet}>{bullet}</li>
+              ))}
+            </ul>
+          </dd>
+        </div>
+      )}
+      {project.myContributions && (
+        <div className="detail-list__row">
+          <dt>My Contributions (Details)</dt>
+          <dd>
+            <ul className="bullet-list">
+              {project.myContributions.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </dd>
+        </div>
+      )}
     </dl>
   )
 }

@@ -4,7 +4,7 @@ export const projects = [
     "slug": "abnb",
     "title": "Abnb",
     "subtitle": "Airbnb Clone",
-    "shortPitch": "A full-stack vacation rental marketplace with search, maps, booking, and user accounts — built as a team of three.",
+    "shortPitch": "A full-stack vacation rental marketplace built by a 3-person team, featuring search, booking, maps, and user accounts.",
     "mainTechnologies": [
       "React",
       "JavaScript (JSX)",
@@ -12,7 +12,6 @@ export const projects = [
       "React Router",
       "Vite",
       "SCSS/Sass",
-      "Material UI",
       "Node.js",
       "Express",
       "MongoDB",
@@ -23,21 +22,21 @@ export const projects = [
       "Chart.js"
     ],
     "coreStack": {
-      "frontend": "React 18 + Vite, Redux, React Router v6, SCSS, Material UI, Axios",
+      "frontend": "React 18 + Vite, Redux, React Router v6, SCSS, Axios",
       "backend": "Node.js, Express, MongoDB (native driver), Socket.io, bcrypt, cookie-based auth",
-      "tools": "ESLint, Nodemon, Vite production build output to Abnb-backend/public"
+      "tools": "ESLint, Nodemon, Vite production build deployed via Abnb-backend/public"
     },
     "keyFeatures": [
-      "Advanced stay search & filtering — location, dates, guests, price range, property type, amenities, and category labels, with debounced updates and a Chart.js price histogram",
-      "Split-view search with Google Maps — infinite-scroll stay list alongside an interactive map with geocoded markers and stay previews",
-      "End-to-end booking flow — stay details, checkout, order creation, trips/orders/wishlist pages, and a credit-card-style payment UI"
+      "Order & booking flow — checkout, order management, and persistence across Redux, services, and MongoDB",
+      "User-scoped data access — logic ensuring hosts see their received orders and guests see their trips",
+      "Frontend–backend integration — aligned service contracts with Express APIs and production data setup"
     ],
-    "architecturePattern": "Component-based React SPA with Redux modules (stay, user, order, system); backend follows Routes → Controllers → Services; dual local/remote service layer on the frontend (VITE_LOCAL toggles localStorage vs REST API); production SPA served by Express",
+    "architecturePattern": "Component-based React SPA with Redux modules; backend Routes → Controllers → Services; dual local/remote service layer (VITE_LOCAL toggle); production SPA served by Express",
     "dataPersistence": "MongoDB (stays, users, orders via REST API); localStorage in local dev mode; encrypted auth token in cookies",
-    "elevatorPitch": "Collaborated with a 3-person team to build a production-style Airbnb clone using React, Redux, and a Node/Express/MongoDB backend. Delivered multi-criteria search, map-based discovery, authenticated booking, and real-time Socket.io messaging. Structured the app with a modular Redux store, reusable UI components, and a deployable full-stack architecture.",
+    "elevatorPitch": "Contributed as a full-stack developer on a 3-person Airbnb clone, with a focus on application logic and data flow. Worked on the order/booking feature — implementing Redux state management, service-layer rules, and backend query logic — and helped integrate frontend services with the Express/MongoDB backend.",
     "technicalChallenges": [
-      "Dynamic MongoDB query building — server-side _buildCriteria() composes regex, range, capacity, and label filters from a complex client filter object",
-      "Google Maps + React integration — geocoding addresses at runtime, rendering custom markers/info windows, and syncing map state with filtered stay results"
+      "Order flow logic — implemented Redux actions/reducers, service methods, and save/query/update behavior for the booking feature, including validation and data normalization",
+      "User-scoped data rules — built consistent guestId / hostId filtering on both frontend services and backend query criteria so users only access their relevant orders and trips"
     ],
     "skillTags": [
       "React",
@@ -47,16 +46,35 @@ export const projects = [
       "Express",
       "MongoDB",
       "REST APIs",
-      "Socket.io",
-      "Google Maps API",
-      "SCSS",
-      "Full-Stack Development",
+      "State Management",
+      "Data Modeling",
+      "Full-Stack Integration",
       "Team Collaboration"
     ],
-    "myRole": "Full-stack team contributor (3-person group) — shared ownership across frontend UI/state, backend API design, and feature integration. No git history is available to attribute specific files to you individually; frame this as collaborative full-stack delivery.",
+    "myRole": "Full-stack contributor on a 3-person team, focused on logic, data flow, and backend integration. Main area of contribution: the order/booking feature — Redux module, service layer, business rules, and related backend API work. Also contributed to Stay Details functionality and production deployment setup.",
     "keyStrengths": [
-      "Junior-to-mid traits: Component decomposition, Redux action/reducer patterns, REST consumption, responsive UI (mobile footer nav, scroll-driven header behavior), and third-party API integration (Google Maps, OAuth)",
-      "Growth-area signals: Some auth logic is partially stubbed (bcrypt compare commented out in login), mixed local/remote service patterns, and hardcoded API keys — typical of a bootcamp sprint, but shows real full-stack scope"
+      "Application logic — translating booking requirements into working code: state management, service methods, validation, and data shaping",
+      "Full-stack thinking — connecting frontend actions to backend endpoints and keeping data rules consistent across both sides",
+      "Collaborative delivery — building the functional layer of features within a shared codebase, alongside teammates working on UI, search, maps, and real-time functionality"
+    ],
+    "resumeBullets": [
+      "Implemented order/booking logic in React/Redux — actions, reducers, and local/remote services connected to Express/MongoDB APIs",
+      "Built user-scoping rules for orders and trips across frontend services and backend query criteria",
+      "Contributed to frontend–backend integration, aligning service contracts and preparing data for production deployment",
+      "Worked on Stay Details and order-related components as part of the team's shared booking experience"
+    ],
+    "myContributions": [
+      "Order Redux module — order.action.js, order.reducer.js, and order store integration",
+      "Order service layer — order.service.local.js, order.service.remote.js, and services/order/index.js",
+      "Order UI logic — OrderDetails, OrderGuestsModal, OrderDateModal, and OrderCheckout flow",
+      "Order status updates — approve/reject logic and status persistence",
+      "User-scoped orders & trips — UserOrders and UserTrips filtering by guest/host",
+      "Backend order API — query criteria, controller integration, and user-scoping on the server",
+      "Backend setup — repo initialization, stay/order service alignment with frontend, and Render deployment config",
+      "Stay Details — early functional work on amenities, ratings, and stay-to-order connection",
+      "Data layer — seeding and maintaining stay_fixed.json, order.json, and user.json",
+      "Socket.io groundwork — initial socket service setup for order-related updates",
+      "Code maintenance — backend–frontend contract matching, debugging, and cleanup of unused modules"
     ],
     "collaboration": "Team project — 3-person group",
     "links": {
