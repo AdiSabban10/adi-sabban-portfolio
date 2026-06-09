@@ -79,6 +79,10 @@ export const projects = [
     "collaboration": "Team project — 3-person group",
     "links": {
       "github": null,
+      "githubRepos": [
+        { "label": "Frontend", "url": "https://github.com/avivdb/Abnb-frontend" },
+        { "label": "Backend", "url": "https://github.com/AdiSabban10/Abnb-backend" }
+      ],
       "live": "https://abnb-b2o9.onrender.com/"
     }
   },
@@ -139,8 +143,8 @@ export const projects = [
     ],
     "collaboration": "Pair project — Gmail module (Adi Sabban)",
     "links": {
-      "github": "https://github.com/DarrOr24/Sprint3-GoogleKeep-Gmail",
-      "live": null
+      "github": "https://github.com/AdiSabban10/Sprint3-Gmail-GoogleKeepl",
+      "live": "https://adisabban10.github.io/Sprint3-Gmail-GoogleKeep/#/mail/inbox"
     }
   },
   {

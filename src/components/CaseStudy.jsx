@@ -176,20 +176,42 @@ export function CaseStudy({ project }) {
           )}
         </div>
         <div className="case-study__links">
-          {project.links.github ? (
-            <a
-              href={project.links.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn--ghost"
-            >
-              GitHub
-            </a>
-          ) : (
-            <span className="btn btn--ghost btn--disabled" title="Link coming soon">
-              GitHub
-            </span>
-          )}
+          {project.links.githubRepos?.length > 0
+            ? project.links.githubRepos.map((repo) =>
+                repo.url ? (
+                  <a
+                    key={repo.label}
+                    href={repo.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn--ghost"
+                  >
+                    GitHub ({repo.label})
+                  </a>
+                ) : (
+                  <span
+                    key={repo.label}
+                    className="btn btn--ghost btn--disabled"
+                    title="Link coming soon"
+                  >
+                    GitHub ({repo.label})
+                  </span>
+                ),
+              )
+            : project.links.github ? (
+                <a
+                  href={project.links.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn--ghost"
+                >
+                  GitHub
+                </a>
+              ) : (
+                <span className="btn btn--ghost btn--disabled" title="Link coming soon">
+                  GitHub
+                </span>
+              )}
           {project.links.live ? (
             <a
               href={project.links.live}
