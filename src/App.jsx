@@ -17,8 +17,7 @@ function App() {
               <p className="section__eyebrow">Selected work</p>
               <h2 className="section__title">Projects</h2>
               <p className="section__desc">
-                A progression from vanilla JavaScript fundamentals to React SPAs
-                and full-stack collaboration.
+                Freelance production work and full-stack projects built with React, .NET, and Node.js.
               </p>
             </div>
             <div className="projects-grid">

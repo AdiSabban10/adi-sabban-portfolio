@@ -1,13 +1,11 @@
-export function Footer() {
-  const year = new Date().getFullYear()
+import { contact } from '../data/contact'
 
+export function Footer() {
   return (
     <footer className="footer">
-      <p>
-        &copy; {year} Adi Sabban — Built with React, Vite, and custom SCSS.
-      </p>
+      <p>Adi Sabban</p>
       <p className="footer__note">
-        <a href="mailto:adialon050@gmail.com">adialon050@gmail.com</a>
+        <a href={`mailto:${contact.email}`}>{contact.email}</a>
       </p>
     </footer>
   )

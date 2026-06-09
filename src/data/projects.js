@@ -180,7 +180,7 @@ export const projects = [
   {
     "id": "keepmailread",
     "slug": "keepmailread",
-    "title": "KeepMailRead",
+    "title": "Gmail and GoogleKeep",
     "subtitle": "DARRADI APPS — Gmail + Google Keep clone",
     "shortPitch": "A browser-based dual-app suite that clones Gmail inbox workflows and Google Keep notes, built as a pair sprint with no backend.",
     "mainTechnologies": [
@@ -207,7 +207,7 @@ export const projects = [
     ],
     "architecturePattern": "Component-based React with a service layer for data/CRUD; nested routes (MailIndex → MailList / MailDetails) and Outlet context to share list actions without prop drilling; HashRouter for client-side navigation",
     "dataPersistence": "localStorage through async-storage.service.js (mailDB key); seed data generated on first load; no REST API (Axios is loaded globally but not used in the mail module)",
-    "elevatorPitch": "Co-developed KeepMailRead, a React single-page app mimicking Gmail and Google Keep. I owned the entire Gmail module end-to-end: routing, UI, service logic, and styling. The mail app supports multi-folder browsing, advanced filtering, compose/send, and a two-stage trash flow, with all state persisted in localStorage via a reusable async storage abstraction.",
+    "elevatorPitch": "Co-developed Gmail and GoogleKeep, a React single-page app mimicking Gmail and Google Keep. I owned the entire Gmail module end-to-end: routing, UI, service logic, and styling. The mail app supports multi-folder browsing, advanced filtering, compose/send, and a two-stage trash flow, with all state persisted in localStorage via a reusable async storage abstraction.",
     "technicalChallenges": [
       "Unified filtering pipeline — Combined route-based folder (status), component state (filterBy, sortBy), and mailService.query() rules (inbox vs sent vs trash vs starred, regex search, read filter, dynamic sort) so one useEffect in MailIndex keeps the list, badge count, and URL in sync.",
       "Nested-route state sharing — Used React Router Outlet context to pass mails, removeMail, and toggle handlers from MailIndex to MailList and MailDetails, including auto-mark-read on open without breaking list updates."
