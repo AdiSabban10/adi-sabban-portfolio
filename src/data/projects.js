@@ -1,5 +1,96 @@
 export const projects = [
   {
+    "id": "playspace",
+    "slug": "playspace",
+    "title": "Playspace",
+    "subtitle": "Gamified Team-Activity Platform (Freelance)",
+    "shortPitch": "A React-based gamified team-activity platform where players join group games, complete timed or sequential tasks, and admins create and manage interactive corporate events.",
+    "mainTechnologies": [
+      "React 18",
+      "JavaScript (JSX)",
+      "Redux",
+      "React Router",
+      "Vite",
+      "SCSS/Sass",
+      "Axios",
+      "Formik",
+      "C#",
+      "ASP.NET Core 8",
+      "Entity Framework Core",
+      "SQL Server"
+    ],
+    "coreStack": {
+      "frontend": "React 18 SPA (pages/, cmps/, customHooks/), Redux (auth, game, activity), React Router v6, modular SCSS, Vite, Axios with cookie-based auth",
+      "backend": "ASP.NET Core 8 REST API — areas I contributed to: PlayerService, PlayerController, GameController, AuthMiddleware, Program.cs (CORS), background workers (DatabaseBackupWorker, SnapShotCreatorWorker, LogCleanupWorker)",
+      "tools": "Git, GitHub Actions (PR-to-production workflow), Serilog (existing setup), FluentFTP, Contabo API"
+    },
+    "keyFeatures": [
+      "Interactive game map — visual task map with status states (done, current, locked, expired), cross-stage navigation, and locked-task modals for time-gated games",
+      "Multi-mode game engine — flat activities vs. multi-stage games, plus onProgress (sequential) and onTime (timestamp-driven) progression with expired-task handling",
+      "Full-stack player answers — frontend revisit flow and admin tooling aligned with new backend persistence, reset, and group-transfer APIs"
+    ],
+    "architecturePattern": "Frontend: component-based React with service layer (game.service, auth.service, http.service), Redux actions/reducers, custom hooks, and event-bus messaging. Backend (contributions): layered REST API — Controllers → Services → Repositories via Unit of Work, plus background workers for backup and log maintenance.",
+    "dataPersistence": "SQL Server via EF Core (backend); REST API as primary data path; localStorage for user/player cache; sessionStorage for game drafts, game-start flags, and stage intro state",
+    "elevatorPitch": "Developed the frontend for Playspace, a gamified corporate team-activity platform, as primary frontend owner (~198 commits). Built the interactive game map, multi-stage and time-based game flows, and admin player-answer tooling. Extended the existing ASP.NET Core backend with player answer persistence, admin management endpoints, stage/lifesaver fixes, and production worker hardening — delivering end-to-end features across React and C#.",
+    "technicalChallenges": [
+      "Time-based game flow logic — implemented expiration, lock, and navigation rules across the game map, stage transitions, and player progress restoration so onTime games skip expired tasks and route players correctly",
+      "Player answer persistence with game-state consistency — designed and shipped the PlayerAnswer table, repository, and service logic on the backend, coordinated with frontend revisit flows, retry-skip behavior, and admin reset with progress/stage/lifesaver cleanup"
+    ],
+    "skillTags": [
+      "React",
+      "Redux",
+      "JavaScript",
+      "SCSS",
+      "ASP.NET Core",
+      "C#",
+      "EF Core",
+      "SQL Server",
+      "REST API",
+      "Full-Stack Delivery",
+      "Complex UI State",
+      "Background Services"
+    ],
+    "myRole": "Primary frontend developer on a freelance production app (~198 frontend commits, ~44% of frontend repo, April–December 2025). Meaningful backend contributor (~40 commits, ~19% of backend repo) on features tied to my frontend work — not primary backend architect. Collaborated with Chen (initial frontend scaffold), Avishai Dotan (core API architecture), and integrated ongoing backend API changes.",
+    "keyStrengths": [
+      "Mid-level+ frontend ownership — end-to-end delivery of complex features (GameMap, stages, admin tools), not just styling",
+      "Full-stack feature delivery — player answers and admin player management built across React/Redux and ASP.NET Core/EF Core",
+      "Complex state and flow debugging — extensive edge-case fixes in game progression, expiration, and admin test mode",
+      "Production ops awareness — stabilized backup/snapshot workers and added log cleanup worker",
+      "Security mindset — authored structured security review and implemented environment-based CORS hardening"
+    ],
+    "resumeBullets": [
+      "Built an interactive game map with dynamic task status (locked, expired, current) and cross-stage navigation for a multi-mode corporate activity platform",
+      "Implemented time-based (onTime) and multi-stage game flows on the frontend, including expiration logic, progress restoration, and 50+ edge-case fixes",
+      "Built player answer persistence end-to-end — EF Core migration, repository, service logic, and player-facing API for revisit flows",
+      "Delivered admin REST endpoints for viewing, resetting, and transferring player answers, with coordinated cleanup of progress, stages, and lifesaver state",
+      "Stabilized production background workers for SQL Server backup and VPS snapshot rotation; added automated log cleanup worker"
+    ],
+    "myContributionsFrontend": [
+      "Game map — static component, dynamic task rendering, status system (done/current/locked/expired), navigation, LockedTaskModal, score panel",
+      "Player game flow — answer revisit, skip non-required questions, open-question textarea, AnswerFeedback, double-submit prevention, progress resume",
+      "Game modes — stages support, onProgress/onTime modes, expired activity handling, lifesaver fixes, stage lock modal",
+      "Game creation — draft autosave (sessionStorage), time validation, multiple-choice normalization, duplicate group validation",
+      "Admin panel — AdminPlayerAnswers table UI, time-based status tracking, player transfer, reset answers, admin test mode fixes",
+      "UI/UX — mobile-responsive SCSS overhaul, FancyTitle, Loader, login/signup/game screen restyling, Hebrew admin UI"
+    ],
+    "myContributionsBackend": [
+      "Player answer persistence (new) — PlayerAnswer entity, EF migration, repository, UnitOfWork wiring, save-on-submit, revisit endpoint",
+      "Admin player management API (new) — GetPlayerAnswers, ResetPlayerAnswers, TransferPlayer endpoints with coordinated state cleanup",
+      "Player context — unified HttpContextService / ValidationService to prevent desync after admin reset",
+      "Stage & lifesaver logic — per-activity attempts, StageId guard, text-hint lifesaver migration, admin-mode submission fixes",
+      "Targeted fixes — AuthService CommitAsync after player insert, GameService player position bug",
+      "Background workers — backup retention, FTP limits, Contabo snapshot fixes, new LogCleanupWorker",
+      "CORS & config — environment-based CORS in Program.cs; authored SECURITY_REPORT.md"
+    ],
+    "scopeNote": "Work project — code and live demo are not available for viewing on this portfolio. For interviews: frontend was mostly mine (~44% of commits); backend was largely built by a teammate — I added player answers, admin APIs, stage/lifesaver fixes, worker ops, and security review in areas directly tied to my frontend features.",
+    "collaboration": "Freelance — primary frontend developer",
+    "links": {
+      "github": null,
+      "live": null,
+      "confidential": true
+    }
+  },
+  {
     "id": "abnb",
     "slug": "abnb",
     "title": "Abnb",
@@ -143,7 +234,7 @@ export const projects = [
     ],
     "collaboration": "Pair project — Gmail module (Adi Sabban)",
     "links": {
-      "github": "https://github.com/AdiSabban10/Sprint3-Gmail-GoogleKeepl",
+      "github": "https://github.com/AdiSabban10/Sprint3-Gmail-GoogleKeep",
       "live": "https://adisabban10.github.io/Sprint3-Gmail-GoogleKeep/#/mail/inbox"
     }
   },

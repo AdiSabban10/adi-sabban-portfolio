@@ -23,7 +23,7 @@ export function Hero() {
       </div>
       <div className="hero__stats" aria-label="Portfolio highlights">
         <div className="stat-card">
-          <span className="stat-card__value">4</span>
+          <span className="stat-card__value">5</span>
           <span className="stat-card__label">Projects</span>
         </div>
         <div className="stat-card">
