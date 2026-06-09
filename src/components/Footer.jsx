@@ -7,7 +7,7 @@ export function Footer() {
         &copy; {year} Adi Sabban — Built with React, Vite, and custom SCSS.
       </p>
       <p className="footer__note">
-        Project links can be added when GitHub and live demo URLs are ready.
+        <a href="mailto:adialon050@gmail.com">adialon050@gmail.com</a>
       </p>
     </footer>
   )

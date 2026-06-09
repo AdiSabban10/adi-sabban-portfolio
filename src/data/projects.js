@@ -31,10 +31,10 @@ export const projects = [
     ],
     "architecturePattern": "Frontend: component-based React with service layer (game.service, auth.service, http.service), Redux actions/reducers, custom hooks, and event-bus messaging. Backend (contributions): layered REST API — Controllers → Services → Repositories via Unit of Work, plus background workers for backup and log maintenance.",
     "dataPersistence": "SQL Server via EF Core (backend); REST API as primary data path; localStorage for user/player cache; sessionStorage for game drafts, game-start flags, and stage intro state",
-    "elevatorPitch": "Developed the frontend for Playspace, a gamified corporate team-activity platform, as primary frontend owner (~198 commits). Built the interactive game map, multi-stage and time-based game flows, and admin player-answer tooling. Extended the existing ASP.NET Core backend with player answer persistence, admin management endpoints, stage/lifesaver fixes, and production worker hardening — delivering end-to-end features across React and C#.",
+    "elevatorPitch": "Worked on Playspace, a gamified corporate team-activity platform, with a focus on frontend development (~198 commits) on an existing React codebase. Built the interactive game map, multi-stage and time-based game flows, and admin player-answer tooling. Also contributed to the ASP.NET Core backend with player answer persistence, admin management endpoints, stage/lifesaver fixes, and production worker hardening — delivering end-to-end features across React and C#.",
     "technicalChallenges": [
       "Time-based game flow logic — implemented expiration, lock, and navigation rules across the game map, stage transitions, and player progress restoration so onTime games skip expired tasks and route players correctly",
-      "Player answer persistence with game-state consistency — designed and shipped the PlayerAnswer table, repository, and service logic on the backend, coordinated with frontend revisit flows, retry-skip behavior, and admin reset with progress/stage/lifesaver cleanup"
+      "Player answer persistence with game-state consistency — built the PlayerAnswer table, repository, and service logic on the backend, coordinated with frontend revisit flows, retry-skip behavior, and admin reset with progress/stage/lifesaver cleanup"
     ],
     "skillTags": [
       "React",
@@ -50,9 +50,9 @@ export const projects = [
       "Complex UI State",
       "Background Services"
     ],
-    "myRole": "Primary frontend developer on a freelance production app (~198 frontend commits, ~44% of frontend repo, April–December 2025). Meaningful backend contributor (~40 commits, ~19% of backend repo) on features tied to my frontend work — not primary backend architect. Collaborated with Chen (initial frontend scaffold), Avishai Dotan (core API architecture), and integrated ongoing backend API changes.",
+    "myRole": "Frontend developer on a freelance production app (~198 frontend commits, April–December 2025), continuing development on an existing React codebase. Also contributed to the ASP.NET Core backend (~40 commits) on player answers, admin APIs, stage/lifesaver fixes, and related areas — building on an established API rather than owning backend architecture.",
     "keyStrengths": [
-      "Mid-level+ frontend ownership — end-to-end delivery of complex features (GameMap, stages, admin tools), not just styling",
+      "Frontend feature delivery — end-to-end implementation of complex features (GameMap, stages, admin tools), not just styling",
       "Full-stack feature delivery — player answers and admin player management built across React/Redux and ASP.NET Core/EF Core",
       "Complex state and flow debugging — extensive edge-case fixes in game progression, expiration, and admin test mode",
       "Production ops awareness — stabilized backup/snapshot workers and added log cleanup worker",
@@ -82,8 +82,8 @@ export const projects = [
       "Background workers — backup retention, FTP limits, Contabo snapshot fixes, new LogCleanupWorker",
       "CORS & config — environment-based CORS in Program.cs; authored SECURITY_REPORT.md"
     ],
-    "scopeNote": "Work project — code and live demo are not available for viewing on this portfolio. For interviews: frontend was mostly mine (~44% of commits); backend was largely built by a teammate — I added player answers, admin APIs, stage/lifesaver fixes, worker ops, and security review in areas directly tied to my frontend features.",
-    "collaboration": "Freelance — primary frontend developer",
+    "scopeNote": "Work project — code and live demo are not available for viewing on this portfolio. For interviews: I focused on frontend development on an existing codebase and made targeted backend contributions — player answers, admin APIs, stage/lifesaver fixes, worker ops, and security review in areas tied to my features.",
+    "collaboration": "Freelance — frontend developer with backend contributions",
     "links": {
       "github": null,
       "live": null,
