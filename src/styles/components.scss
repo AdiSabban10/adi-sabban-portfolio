@@ -49,6 +49,11 @@
   cursor: not-allowed;
 }
 
+.btn--sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.8125rem;
+}
+
 .pill {
   display: inline-block;
   padding: 0.3rem 0.7rem;
@@ -64,80 +69,170 @@
   padding: 0.2rem 0.55rem;
 }
 
-// Project cards
-.project-card {
-  display: flex;
-  flex-direction: column;
-  gap: 0.875rem;
-  padding: 1.5rem;
+// Project showcase
+.project-showcase {
+  padding: 1.75rem;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
-  transition:
-    transform var(--transition-base),
-    box-shadow var(--transition-base),
-    border-color var(--transition-base);
+  scroll-margin-top: calc(var(--header-height) + 1rem);
 
-  &:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-md);
+  &--featured {
     border-color: var(--color-accent-soft);
+    background: linear-gradient(
+      165deg,
+      var(--color-surface) 0%,
+      var(--color-bg-muted) 100%
+    );
+  }
+
+  &--compact {
+    padding: 1.25rem;
+
+    .project-showcase__summary {
+      font-size: 0.9375rem;
+    }
+
+    .project-showcase__highlights li {
+      font-size: 0.875rem;
+    }
   }
 }
 
-.project-card__header {
+.project-showcase__header {
   display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
-.project-card__title {
-  font-size: 1.125rem;
-  font-weight: 700;
+.project-showcase__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.35rem;
 }
 
-.project-card__subtitle {
-  font-size: 0.8125rem;
-  color: var(--color-text-muted);
-}
-
-.project-card__badge {
-  align-self: flex-start;
-  margin-top: 0.25rem;
+.project-showcase__type {
   font-size: 0.6875rem;
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.project-showcase__category {
+  font-size: 0.625rem;
+  font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: var(--color-text-subtle);
+  padding: 0.15rem 0.45rem;
+  border-radius: var(--radius-full);
+  background: var(--color-accent);
+  color: #fff;
 }
 
-.project-card__pitch {
-  flex: 1;
+.project-showcase__title {
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.project-showcase__subtitle {
   font-size: 0.9375rem;
   color: var(--color-text-muted);
-  line-height: 1.55;
+  margin-top: 0.2rem;
 }
 
-.project-card__tags {
+.project-showcase__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.project-showcase__confidential {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  padding: 0.45rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  background: var(--color-bg-muted);
+}
+
+.project-showcase__summary {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  margin-bottom: 0.75rem;
+}
+
+.project-showcase__role {
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+}
+
+.project-showcase__highlights {
+  list-style: none;
+  margin: 0 0 1.25rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+
+  li {
+    position: relative;
+    padding-left: 1.25rem;
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    color: var(--color-text);
+
+    &::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--color-accent);
+    }
+  }
+}
+
+.project-showcase__stack {
   display: flex;
   flex-wrap: wrap;
   gap: 0.35rem;
 }
 
-.project-card__link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: var(--color-accent);
-  margin-top: auto;
-  transition: gap var(--transition-fast);
+.project-showcase__note {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+}
 
-  &:hover {
-    gap: 0.55rem;
-  }
+.projects-learning {
+  margin-top: 3rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.projects-learning__title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+.projects-learning__desc {
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1.25rem;
 }
 
 // Header

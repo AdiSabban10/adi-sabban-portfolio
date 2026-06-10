@@ -38,21 +38,16 @@
   scroll-margin-top: var(--header-height);
 }
 
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.25rem;
-}
-
-.case-studies-section {
-  border-top: 1px solid var(--color-border);
-  scroll-margin-top: var(--header-height);
-}
-
-.case-studies-list {
+.projects-showcase-list {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 1.5rem;
+}
+
+.projects-learning__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
 }
 
 .hero {

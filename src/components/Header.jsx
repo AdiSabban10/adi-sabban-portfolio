@@ -12,7 +12,6 @@ export function Header() {
         <nav className="header__nav" aria-label="Main navigation">
           <a href="#about">About</a>
           <a href="#projects">Projects</a>
-          <a href="#case-studies">Case studies</a>
           <div className="header__dropdown">
             <button
               type="button"

@@ -20,9 +20,6 @@ export function Hero() {
           <a href="#projects" className="btn btn--primary">
             View projects
           </a>
-          <a href="#case-studies" className="btn btn--ghost">
-            Read case studies
-          </a>
         </div>
       </div>
       <aside className="hero__contact" aria-label="Contact information">
