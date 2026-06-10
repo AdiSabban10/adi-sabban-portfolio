@@ -109,7 +109,7 @@ export const projects = [
       'Core game logic — mine placement, flood-fill reveal, and win/loss detection.',
       'Extended gameplay with hints, undo via board snapshots, lives, and timer.',
     ],
-    stack: ['JavaScript', 'HTML', 'CSS', 'Web Audio API'],
+    stack: ['JavaScript', 'HTML', 'CSS'],
     links: {
       github: 'https://github.com/AdiSabban10/Minesweeper-game',
       live: 'https://adisabban10.github.io/Minesweeper-game/',

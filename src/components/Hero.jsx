@@ -9,12 +9,13 @@ export function Hero() {
           Hi, I&apos;m <span className="hero__accent">Adi Sabban</span>
         </h1>
         <p className="hero__text">
-          Full-stack developer with a strong passion for learning, problem-solving,
-          and building user-friendly applications. I develop with React, Node.js, and
-          .NET Core — integrating REST APIs and working with MongoDB and SQL. On a
-          freelance production platform I focused on frontend development and also
-          contributed to the ASP.NET Core backend. Coding Academy Full-Stack Bootcamp
-          graduate.
+          Drawing on an M.A. in Mathematics Education and years of teaching
+          experience, I bring strong analytical skills and clear communication to
+          full-stack development. I build robust, user-friendly applications using
+          React, Node.js, and .NET Core — integrating REST APIs and working with
+          MongoDB and SQL. Most recently, on a freelance production platform, I
+          focused on frontend development and also contributed to the ASP.NET Core
+          backend. Coding Academy Full-Stack Bootcamp graduate.
         </p>
         <div className="hero__actions">
           <a href="#projects" className="btn btn--primary">
