@@ -5,4 +5,5 @@ export const contact = {
   location: 'Karnei Shomron, Israel',
   github: 'https://github.com/AdiSabban10',
   linkedin: 'https://www.linkedin.com/in/adi-sabban-76451b34a/',
+  resumeFile: 'Adi-Sabban-CV.pdf',
 }

@@ -1,6 +1,8 @@
 import { contact } from '../data/contact'
 
 export function Hero() {
+  const resumeUrl = `${import.meta.env.BASE_URL}${contact.resumeFile}`
+
   return (
     <section id="about" className="hero">
       <div className="hero__content">
@@ -9,7 +11,7 @@ export function Hero() {
           Hi, I&apos;m <span className="hero__accent">Adi Sabban</span>
         </h1>
         <p className="hero__text">
-          Drawing on an M.A. in Mathematics Education and years of teaching
+          Drawing on an M.A. in Mathematics and years of teaching
           experience, I bring strong analytical skills and clear communication to
           full-stack development. I build robust, user-friendly applications using
           React, Node.js, and .NET Core — integrating REST APIs and working with
@@ -66,6 +68,17 @@ export function Hero() {
               </a>
             </li>
           )}
+          <li className="contact-list__item">
+            <span className="contact-list__label">CV</span>
+            <a
+              href={resumeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact-list__value"
+            >
+              View CV
+            </a>
+          </li>
         </ul>
       </aside>
     </section>
